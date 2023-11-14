@@ -6,7 +6,7 @@ import { Board } from './components/Board'
 import { Stats } from './components/Stats'
 
 const reducer = combineReducers({
-  game: game.reducer
+  game: game.reducer // store with one reducer
 })
 
 const store = configureStore({ reducer })

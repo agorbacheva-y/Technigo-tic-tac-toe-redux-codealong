@@ -1,9 +1,17 @@
-import React from 'react'
-import { Player } from 'components/Player'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Player } from 'components/Player';
+import { game } from 'reducers/game';
+
+// button = square
+// shows which player when clicked (dispatch action)
 
 export const Square = ({ value, index }) => {
+  const dispatch = useDispatch();
+
   const handleClick = () => {
-    // TODO send the captureSquare action
+    // pass payload = obj with key of index
+    dispatch(game.actions.captureSquare({ index }))
   }
 
   return (

@@ -1,9 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { Square } from 'components/Square'
 
+// get squuares from redux state then map over to render each square
+
 export const Board = () => {
-  // TODO - use the 'squares' state from the game reducer
-  const squares = []
+  // access redux store and grab squares
+  const squares = useSelector((store) => (store.game.squares))
 
   return (
     <div className="board">

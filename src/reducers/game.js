@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { calculateWinner } from 'utils/calculateWinner'
 
+// define new game state, goes into redux store
 const newGame = {
   squares: [
     null, null, null,
@@ -11,6 +12,7 @@ const newGame = {
   player: 'x'
 }
 
+// define slice in redux
 export const game = createSlice({
   name: 'game',
   initialState: newGame,
